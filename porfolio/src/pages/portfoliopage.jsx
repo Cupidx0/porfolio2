@@ -5,7 +5,7 @@ function PortfolioPage() {
             title: 'AI Outfit Generator',
             description:
             'Weather-aware outfit recommendations that blend personal style profiles with AI suggestions for daily planning.',
-            stack: ['React', 'Flask', 'Firebase', 'OpenAI', 'OpenWeather'],
+            stack: ['React','python','Flask', 'Firebase', 'OpenAI', 'OpenWeather'],
             github: 'https://github.com/Cupidx0',
             demo: 'https://example.com',
         },
@@ -13,23 +13,7 @@ function PortfolioPage() {
             title: 'AI Digital Twin Assistant',
             description:
             'An AI productivity and career companion that organizes goals, habits, and learning plans with smart reminders.',
-            stack: ['React', 'Node.js', 'Firebase', 'LangChain'],
-            github: 'https://github.com/Cupidx0',
-            demo: 'https://example.com',
-        },
-        {
-            title: 'Campus Events Hub',
-            description:
-            'A responsive web app for discovering local student events, saving favorites, and sharing updates in real time.',
-            stack: ['React', 'JavaScript', 'Firestore', 'Vite'],
-            github: 'https://github.com/Cupidx0',
-            demo: 'https://example.com',
-        },
-        {
-            title: 'Algorithm Practice Lab',
-            description:
-            'Interactive coding challenges with progress tracking, test cases, and performance insights for interview prep.',
-            stack: ['Python', 'Flask', 'SQLite', 'REST'],
+            stack: ['React', 'python', 'Flask', 'Firebase', 'opensource LLMs'],
             github: 'https://github.com/Cupidx0',
             demo: 'https://example.com',
         },
@@ -46,7 +30,7 @@ function PortfolioPage() {
         },
         {
             title: 'Database / Cloud',
-            items: ['Firebase', 'Firestore'],
+            items: ['Firebase', 'Firestore', 'SQL'],
         },
         {
             title: 'Tools',
@@ -60,26 +44,12 @@ function PortfolioPage() {
         {
             name: 'ai-outfit-generator',
             description: 'Style recommendations with AI and weather context.',
-            language: 'JavaScript',
-            stars: '28',
+            language: 'React, python, flask, firebase',
         },
         {
             name: 'digital-twin-assistant',
             description: 'AI companion for focus, learning, and productivity.',
-            language: 'TypeScript',
-            stars: '19',
-        },
-        {
-            name: 'firebase-portfolio',
-            description: 'Reusable components and auth patterns for student builders.',
-            language: 'React',
-            stars: '14',
-        },
-        {
-            name: 'algo-practice-lab',
-            description: 'Coding practice prompts with scoring and hints.',
-            language: 'Python',
-            stars: '12',
+            language: 'React, python, flask, firebase',
         },
         ]
         const newDate = new Date().getFullYear()
