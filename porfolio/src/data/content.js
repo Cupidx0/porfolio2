@@ -2,7 +2,7 @@
 
 export const profile = {
   name: 'Godwin Alamu',
-  role: 'Back-End & Full-Stack Developer',
+  role: 'BackEnd & FullStack Developer',
   tagline: 'I build backend systems and full-stack applications.',
   location: 'London, UK',
   email: 'alamugodwin@gmail.com',
@@ -27,7 +27,7 @@ export const journey = [
     org: 'Higher education',
     description:
       'Studying computing and software development, alongside building AI powered side projects.',
-    tags: ['Computing', 'Software development', 'Back-end'],
+    tags: ['Computing', 'Software development', 'Backend'],
   },
   {
     period: 'Certificate',
