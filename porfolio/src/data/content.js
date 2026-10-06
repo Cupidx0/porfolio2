@@ -3,7 +3,7 @@
 export const profile = {
   name: 'Godwin Alamu',
   role: 'Back-End & Full-Stack Developer',
-  tagline: 'I build practical back ends and AI-powered web apps that feel simple to use.',
+  tagline: 'I build backend systems and full-stack applications.',
   location: 'London, UK',
   email: 'alamugodwin@gmail.com',
   socials: [
@@ -14,8 +14,9 @@ export const profile = {
 }
 
 export const about = [
-  "I'm a developer who enjoys turning complex AI workflows into calm, human-first products. Most of my work sits where a clean React front end meets a Python back end and a dependable data layer.",
-  "Right now I'm studying for an HNC/HND in Computing and building tools that make everyday life easier for students and small teams — from outfit planning to goal tracking.",
+  "I'm a developer who enjoys turning complex workflows into calm, user-friendly products. Most of my work sits where a clean React front end meets a Python back end and a dependable data layer.",
+  "i also have experience in languages like JavaScript, TypeScript, Go, and frameworks like Flask and Node.js. I have a strong understanding of databases, RESTful APIs, and cloud services like Firebase.",
+  "Right now I'm studying for an HNC/HND in Computing and building tools that make everyday life easier for students and small teams from outfit planning to goal tracking.",
   "I care about clarity, performance and shipping things people actually use. I'm open to internships, apprenticeships and collaborative projects.",
 ]
 
@@ -25,12 +26,12 @@ export const journey = [
     title: 'HNC/HND in Computing',
     org: 'Higher education',
     description:
-      'Studying computing and software development, alongside building AI-powered side projects.',
+      'Studying computing and software development, alongside building AI powered side projects.',
     tags: ['Computing', 'Software development', 'Back-end'],
   },
   {
     period: 'Certificate',
-    title: 'Meta Front-End Developer Professional Certificate',
+    title: 'Meta Front End Developer Professional Certificate',
     org: 'Coursera',
     description: 'Professional certificate covering React, JavaScript, HTML, CSS, UX/UI and version control.',
     tags: ['React', 'JavaScript', 'UX/UI'],
@@ -38,9 +39,18 @@ export const journey = [
     link: '',
   },
   {
+    period: 'Certificate',
+    title: 'Google crash course on Python',
+    org: 'Coursera',
+    description: 'Comprehensive course covering Python programming fundamentals and applications.',
+    tags: ['Python', 'Programming'],
+    // Paste the Coursera credential URL here to make the title a link.
+    link: 'https://www.coursera.org/account/accomplishments/verify/CIHI8462JWV1?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course',
+  },
+  {
     period: 'Ongoing',
     title: 'Independent projects',
-    org: 'Self-directed',
+    org: 'Self directed',
     description:
       'Designing and shipping full-stack apps end to end: React interfaces, Flask APIs, Firebase auth and Firestore data, and third-party AI and weather APIs.',
     tags: ['React', 'Python', 'Flask', 'Firebase', 'LLM APIs'],
@@ -52,7 +62,7 @@ export const projects = [
   {
     title: 'AI Outfit Generator',
     description:
-      'Weather-aware outfit recommendations that blend a personal style profile with AI suggestions, so planning what to wear takes seconds.',
+      'Weather aware outfit recommendations that blend a personal style profile with AI suggestions, so planning what to wear takes seconds.',
     stack: ['React', 'Python', 'Flask', 'Firebase', 'OpenAI', 'OpenWeather'],
     github: '',
     demo: '',
@@ -60,16 +70,16 @@ export const projects = [
   {
     title: 'AI Digital Twin Assistant',
     description:
-      'In progress — a productivity and career companion that organises goals, habits and learning plans, with smart reminders powered by open-source LLMs.',
-    stack: ['React', 'Python', 'Flask', 'Firebase', 'Open-source LLMs'],
+      'In progress a productivity and career companion that organises goals, habits and learning plans, with smart reminders powered by open source LLMs.',
+    stack: ['React', 'Python', 'Flask', 'Firebase', 'Open source LLMs'],
     github: '',
     demo: '',
   },
 ]
 
 export const skills = [
-  { title: 'Frontend', items: ['React', 'JavaScript', 'HTML', 'CSS', 'Vite'] },
-  { title: 'Backend', items: ['Python', 'Flask', 'Node.js', 'REST APIs'] },
-  { title: 'Data & Cloud', items: ['Firebase', 'Firestore', 'SQL'] },
+  { title: 'Frontend', items: ['React', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'Vite'] },
+  { title: 'Backend', items: ['Python', 'Flask', 'Go', 'Node.js', 'REST APIs'] },
+  { title: 'Data & Cloud', items: ['Firebase', 'Firestore','Supabase', 'SQL'] },
   { title: 'Tools', items: ['Git', 'GitHub', 'ESLint'] },
 ]
