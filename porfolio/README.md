@@ -26,8 +26,7 @@ Project `github` and `demo` links render only when they are set, so add them onc
 
 ```
 src/
-├── components/   Sidebar, Section, Spotlight, TagList
+├── components/   Header, Section, TagList
 ├── data/         content.js — every piece of site copy
-├── hooks/        useActiveSection — scroll-spy for the nav
 └── pages/        portfoliopage.jsx — page layout
 ```

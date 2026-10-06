@@ -1,130 +1,119 @@
-import Sidebar from '../components/Sidebar.jsx'
+import Header from '../components/Header.jsx'
 import Section from '../components/Section.jsx'
-import Spotlight from '../components/Spotlight.jsx'
 import TagList from '../components/TagList.jsx'
 import { about, journey, profile, projects, skills } from '../data/content.js'
-import { useActiveSection } from '../hooks/useActiveSection.js'
 
 const SECTIONS = [
   { id: 'about', label: 'About' },
+  { id: 'work', label: 'Work' },
   { id: 'journey', label: 'Journey' },
-  { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'contact', label: 'Contact' },
 ]
-const SECTION_IDS = SECTIONS.map((section) => section.id)
 
 function PortfolioPage() {
-  const active = useActiveSection(SECTION_IDS)
-
   return (
     <div className="page">
       <a className="skip-link" href="#content">
         Skip to content
       </a>
-      <Spotlight />
 
-      <div className="layout">
-        <Sidebar sections={SECTIONS} active={active} />
+      <Header sections={SECTIONS} />
 
-        <main id="content" className="content">
-          <Section id="about" label="About">
-            {about.map((paragraph) => (
-              <p key={paragraph} className="prose">
-                {paragraph}
-              </p>
-            ))}
-          </Section>
+      <main id="content">
+        <Section id="about" label="About">
+          {about.map((paragraph) => (
+            <p key={paragraph} className="prose">
+              {paragraph}
+            </p>
+          ))}
+        </Section>
 
-          <Section id="journey" label="Journey">
-            <ol className="card-list">
-              {journey.map((item) => (
-                <li key={item.title} className="card">
-                  <p className="card-meta">{item.period}</p>
+        <Section id="work" label="Work">
+          <ol className="entries">
+            {projects.map((project, index) => {
+              const link = project.demo || project.github
+              return (
+                <li key={project.title} className="entry">
+                  <p className="entry-meta">{String(index + 1).padStart(2, '0')}</p>
                   <div>
-                    <h3 className="card-title">
-                      {item.link ? (
-                        <a href={item.link} target="_blank" rel="noreferrer" className="card-link">
-                          {item.title} <span aria-hidden="true">↗</span>
+                    <h3 className="entry-title">
+                      {link ? (
+                        <a href={link} target="_blank" rel="noreferrer">
+                          {project.title} <span aria-hidden="true">↗</span>
                         </a>
                       ) : (
-                        item.title
-                      )}{' '}
-                      <span className="card-org">· {item.org}</span>
+                        project.title
+                      )}
                     </h3>
-                    <p className="card-text">{item.description}</p>
-                    <TagList items={item.tags} label="Focus areas" />
+                    <p className="entry-text">{project.description}</p>
+                    <TagList items={project.stack} label="Built with" />
+                    {project.github && project.demo && (
+                      <a href={project.github} target="_blank" rel="noreferrer" className="text-link">
+                        Source code
+                      </a>
+                    )}
                   </div>
                 </li>
-              ))}
-            </ol>
-          </Section>
+              )
+            })}
+          </ol>
+          <a href="https://github.com/Cupidx0" target="_blank" rel="noreferrer" className="text-link">
+            More on GitHub →
+          </a>
+        </Section>
 
-          <Section id="projects" label="Projects">
-            <ul className="card-list">
-              {projects.map((project, index) => {
-                const link = project.demo || project.github
-                return (
-                  <li key={project.title} className="card">
-                    <p className="card-meta">{String(index + 1).padStart(2, '0')}</p>
-                    <div>
-                      <h3 className="card-title">
-                        {link ? (
-                          <a href={link} target="_blank" rel="noreferrer" className="card-link">
-                            {project.title} <span aria-hidden="true">↗</span>
-                          </a>
-                        ) : (
-                          project.title
-                        )}
-                      </h3>
-                      <p className="card-text">{project.description}</p>
-                      <TagList items={project.stack} label="Built with" />
-                      {project.github && project.demo && (
-                        <a href={project.github} target="_blank" rel="noreferrer" className="inline-link">
-                          Source code
-                        </a>
-                      )}
-                    </div>
-                  </li>
-                )
-              })}
-            </ul>
-            <a href="https://github.com/Cupidx0" target="_blank" rel="noreferrer" className="inline-link more">
-              View all work on GitHub <span aria-hidden="true">→</span>
-            </a>
-          </Section>
-
-          <Section id="skills" label="Skills">
-            <dl className="skills">
-              {skills.map((group) => (
-                <div key={group.title} className="skill-row">
-                  <dt>{group.title}</dt>
-                  <dd>
-                    <TagList items={group.items} label={group.title} />
-                  </dd>
+        <Section id="journey" label="Journey">
+          <ol className="entries">
+            {journey.map((item) => (
+              <li key={item.title} className="entry">
+                <p className="entry-meta">{item.period}</p>
+                <div>
+                  <h3 className="entry-title">
+                    {item.link ? (
+                      <a href={item.link} target="_blank" rel="noreferrer">
+                        {item.title} <span aria-hidden="true">↗</span>
+                      </a>
+                    ) : (
+                      item.title
+                    )}
+                  </h3>
+                  <p className="entry-org">{item.org}</p>
+                  <p className="entry-text">{item.description}</p>
+                  <TagList items={item.tags} label="Focus areas" />
                 </div>
-              ))}
-            </dl>
-          </Section>
+              </li>
+            ))}
+          </ol>
+        </Section>
 
-          <Section id="contact" label="Contact">
-            <h3 className="contact-heading">Let&rsquo;s build something practical.</h3>
-            <p className="prose">
-              I&rsquo;m looking for internships, apprenticeships and collaborative projects in AI, web apps
-              and tooling. My inbox is always open.
-            </p>
-            <a className="button" href={`mailto:${profile.email}`}>
-              Say hello
-            </a>
-          </Section>
+        <Section id="skills" label="Skills">
+          <dl className="skills">
+            {skills.map((group) => (
+              <div key={group.title} className="skill-row">
+                <dt>{group.title}</dt>
+                <dd>{group.items.join(', ')}</dd>
+              </div>
+            ))}
+          </dl>
+        </Section>
 
-          <footer className="footer">
-            <p>
-              Designed and built by {profile.name} with React and Vite. © {new Date().getFullYear()}
-            </p>
-          </footer>
-        </main>
-      </div>
+        <Section id="contact" label="Contact">
+          <p className="contact-lead">Let&rsquo;s build something practical.</p>
+          <p className="prose">
+            I&rsquo;m looking for internships, apprenticeships and collaborative projects in AI, web apps
+            and tooling. The quickest way to reach me is email.
+          </p>
+          <a className="email" href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>
+        </Section>
+      </main>
+
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} {profile.name}</p>
+        <p>Built with React &amp; Vite</p>
+      </footer>
     </div>
   )
 }
