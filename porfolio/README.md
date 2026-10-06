@@ -1,16 +1,33 @@
-# React + Vite
+# Godwin Alamu — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of Godwin Alamu, a London-based full-stack developer building practical, AI-powered web apps with React, Python and Firebase.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 + Vite 7 (SWC)
+- Plain CSS with design tokens (`src/index.css`)
+- ESLint 9 flat config
 
-## React Compiler
+## Run locally
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+```bash
+npm install
+npm run dev      # start the dev server
+npm run lint     # lint
+npm run build    # production build in dist/
+```
 
-## Expanding the ESLint configuration
+## Editing content
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+All copy (bio, journey, projects, skills, links) lives in `src/data/content.js`.
+Project `github` and `demo` links render only when they are set, so add them once a project is public.
+
+## Structure
+
+```
+src/
+├── components/   Sidebar, Section, Spotlight, TagList
+├── data/         content.js — every piece of site copy
+├── hooks/        useActiveSection — scroll-spy for the nav
+└── pages/        portfoliopage.jsx — page layout
+```
