@@ -48,8 +48,8 @@ function PortfolioPage() {
                     </h3>
                     <p className="entry-text">{project.description}</p>
                     <TagList items={project.stack} label="Built with" />
-                    {project.github && project.demo && (
-                      <a href={project.github} target="_blank" rel="noreferrer" className="text-link">
+                    {project.link && project.demo && (
+                      <a href={project.link} target="_blank" rel="noreferrer" className="text-link">
                         Source code
                       </a>
                     )}

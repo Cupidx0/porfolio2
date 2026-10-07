@@ -64,7 +64,15 @@ export const projects = [
     description:
       'Weather aware outfit recommendations that blend a personal style profile with AI suggestions, so planning what to wear takes seconds.',
     stack: ['React', 'Python', 'Flask', 'Firebase', 'OpenAI', 'OpenWeather'],
-    github: '',
+    link: 'https://outfit-animator.gfa.com.de/',
+    demo: '',
+  },
+  {
+    title:'job swipr',
+    description:
+      'A job search tool that uses AI to match your skills and preferences with job listings, helping you find the right opportunities faster.',
+    stack: ['React', 'Node.js', 'Express', 'MongoDB', 'OpenAI'],
+    link: 'https://job-website-vwi3.vercel.app/',
     demo: '',
   },
   {
@@ -72,7 +80,7 @@ export const projects = [
     description:
       'In progress a productivity and career companion that organises goals, habits and learning plans, with smart reminders powered by open source LLMs.',
     stack: ['React', 'Python', 'Flask', 'Firebase', 'Open source LLMs'],
-    github: '',
+    link: '',
     demo: '',
   },
 ]
