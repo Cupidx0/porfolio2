@@ -48,8 +48,8 @@ function PortfolioPage() {
                     </h3>
                     <p className="entry-text">{project.description}</p>
                     <TagList items={project.stack} label="Built with" />
-                    {project.p_link && project.demo && (
-                      <a href={project.p_link} target="_blank" rel="noreferrer" className="text-link">
+                    {p_link && demo && (
+                      <a href={p_link} target="_blank" rel="noreferrer" className="text-link">
                         Live demo →
                       </a>
                     )}
