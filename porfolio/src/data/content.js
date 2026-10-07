@@ -72,7 +72,7 @@ export const projects = [
     description:
       'A job search tool that uses AI to match your skills and preferences with job listings, helping you find the right opportunities faster.',
     stack: ['React', 'Node.js', 'Express', 'MongoDB', 'OpenAI'],
-    p_link: 'https://job-website-vwi3.vercel.app/',
+    p_link: 'https://myjobflow-ashen.vercel.app/',
     demo: '',
   },
   {
