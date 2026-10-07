@@ -32,7 +32,7 @@ function PortfolioPage() {
         <Section id="work" label="Work">
           <ol className="entries">
             {projects.map((project, index) => {
-              const link = project.demo || project.github
+              const link = project.demo || project.p_link
               return (
                 <li key={project.title} className="entry">
                   <p className="entry-meta">{String(index + 1).padStart(2, '0')}</p>
@@ -48,14 +48,9 @@ function PortfolioPage() {
                     </h3>
                     <p className="entry-text">{project.description}</p>
                     <TagList items={project.stack} label="Built with" />
-                    {p_link && demo && (
-                      <a href={p_link} target="_blank" rel="noreferrer" className="text-link">
-                        Live demo →
-                      </a>
-                    )}
-                    {project.p_link && !project.demo && (
+                    {project.p_link && project.demo && (
                       <a href={project.p_link} target="_blank" rel="noreferrer" className="text-link">
-                        Project →
+                        Live demo →
                       </a>
                     )}
                   </div>
