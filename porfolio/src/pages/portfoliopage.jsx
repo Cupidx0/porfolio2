@@ -112,7 +112,6 @@ function PortfolioPage() {
 
       <footer className="footer">
         <p>© {new Date().getFullYear()} {profile.name}</p>
-        <p>Built with React &amp; Vite</p>
       </footer>
     </div>
   )
